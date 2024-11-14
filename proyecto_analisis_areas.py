@@ -24,7 +24,7 @@ datos = datos[datos['AREA / AÑOS'].notna()]
 
 # 4. Interfaz con Streamlit
 st.title('Evolución de las Áreas a lo largo de los Años')
-area = st.selectbox('Selecciona el área', datos['AREA / AÑOS'])
+area = st.selectbox('Selecciona el área', datos['AREA / AÑOS'].unique())
 
 # Filtrar los datos según el área seleccionada
 area_data = datos[datos['AREA / AÑOS'] == area]
